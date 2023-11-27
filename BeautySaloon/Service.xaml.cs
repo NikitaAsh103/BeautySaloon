@@ -71,9 +71,20 @@ namespace BeautySaloon
     };
 
         }
-    }
 
+        private void BtnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(Salon.Text))
+            {
+                MessageBox.Show("Поле Салон должно быть заполнено", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else { MessageBox.Show("Запись прошла успено", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information); }
+        }
+    }
     
+
+
     public class SalonPlace
     {
         public string Name { get; set; } = "";
